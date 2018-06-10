@@ -2,9 +2,13 @@
 * @Author: liyue2018
 * @Date:   2018-06-10 15:20:53
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-10 17:17:31
+* @Last Modified time: 2018-06-10 23:31:13
 */
 // 搜索历史
+
+.search-content {
+    background: #fff;
+}
 
 .search-container {
     background: #fff;
@@ -53,6 +57,7 @@
             }
             ul {
                 border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
                 padding-top: 10px;
             }
         }

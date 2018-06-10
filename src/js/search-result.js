@@ -2,16 +2,34 @@
 * @Author: liyue2018
 * @Date:   2018-06-10 17:28:38
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-10 21:50:36
+* @Last Modified time: 2018-06-11 00:05:29
 */
 
 // 获取用户输入的关键字
 var keyword = getParamsByUrl(location.href,"keyword");
+var html = "";
 
 $(function () {
     // var html = template('searchTpl',searchData);
     // $('.search-results').html(html);
     // getData(keyword);
+    // 侧边栏滑动
+    mui('.mui-scroll-wrapper').scroll({
+            deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+    });
+    // 价格排序
+    // 轻敲事件
+    // var data = [];
+    // var flag = true;
+    // var len = searchData.content.length;
+    // $('.price-sort').on('tap', function () {
+    //     if (flag) {
+    //         for (var i = 0; i < len; i ++) {
+    //             data.push(searchData.content[i].proNowprice);
+    //             data.sort(sortNumber);
+    //         }
+    //     }
+    // });
 
 });
 
@@ -21,57 +39,57 @@ var searchData = {
             "id": 1,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '560.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 2,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '400.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 3,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '240.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 4,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '900.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 5,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '600.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 6,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '260.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 7,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '50.00',
+            "proDelprice": '990.00'
         },
         {
             "id": 8,
             "proName": '图拉姆皮鞋春夏新款尖头商务休闲鞋系带正装鞋子 黑色单里款 43',
             "proImg": 'images/product.png',
-            "proNowprice": '￥560.00',
-            "proDelprice": '￥990.00'
+            "proNowprice": '60.00',
+            "proDelprice": '990.00'
         },
 
     ]
@@ -94,15 +112,25 @@ function getParamsByUrl (url, name) {
     return null;
 }
 
+// var page = 1;
 // $.ajax({
 //     url: '',
 //     type: 'get',
 //     data: {
-//         page: 1,
+//         page: page++,
 //         pageSize: 6,
-//         proName: keyword
+//         proName: keyword,
+//         
 //     },
 //     success: function(response) {
+//         if (response.data.length > 0) {
+//             html += template('.searchTpl',response);
+//             $('.search-results').html(html);
+//             this.endPullupToRefresh(false);
+//         } else {
+//             // 告诉上拉加载当前数据加载完毕
+//             this.endPullupToRefresh(true);
+//         }
 
 //     }
 // });
@@ -122,12 +150,27 @@ mui.init({
   }
 });
 
+// 下拉渲染数据
+
 function getData() {
-    var html = template('searchTpl',searchData);
+    html += template('searchTpl',searchData);
     $('.search-results').html(html);
-    this.endPullupToRefresh(true);
+    if (searchData.length > 0) {
+        html += html;
+        $('.search-results').html(html);
+        this.endPullupToRefresh(false);
+    } else {
+        // 加载完毕
+        this.endPullupToRefresh(true);
+    }
 }
 
+// 排序函数
+
+// function sortNumber(a,b)
+// {
+//     return a - b
+// }
 
 
 

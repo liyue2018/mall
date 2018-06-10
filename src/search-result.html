@@ -13,11 +13,13 @@
     <script src="assets/template/template-native.js"></script>
     <script src="assets/mui/js/mui.js"></script>
     <script src="js/search-result.js"></script>
+    <script src="js/public.js"></script>
+    
 </head>
 <body>
     <!-- 头部标题开始 -->
     <header id="header" class="mui-bar mui-bar-nav mall-header">
-        <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back-icon"></a>
         <h1 class="mui-title">搜索结果</h1>
     </header><!-- /header -->
     <!-- 头部标题结束 -->
@@ -42,11 +44,11 @@
     </nav>
     <!-- 底部导航结束 -->
     <!-- 主要内容开始 -->
-    <div class="mui-content"  id="refreshContainer">
+    <div class="mui-content mui-scroll-wrapper" id="refreshContainer">
         <div class="main-content">
               <!-- 条件排序开始 -->
             <div class="mui-row result-filter">
-                <div class="mui-col-xs-6 filter-item">
+                <div class="mui-col-xs-6 filter-item price-sort">
                     <span>价格</span>
                     <i class="mui-icon mui-icon-arrowdown"></i>
                 </div>
@@ -66,8 +68,8 @@
                                  <img src="<%=content[i].proImg%>" alt="">
                                  <span class="product-desc"><%=content[i].proName%></span>
                                  <p class="mall-pPrice">
-                                    <span class="now-price"><%=content[i].proNowprice%></span>
-                                    <span class="del-price"><%=content[i].proDelprice%></span>
+                                    <span class="now-price">￥<%=content[i].proNowprice%></span>
+                                    <span class="del-price">￥<%=content[i].proDelprice%></span>
                                  </p>
                                  <span class="buy-now">立刻购买</span>
                               </a>
