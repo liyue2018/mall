@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mobile---搜索结果页面</title>
+    <link rel="stylesheet" href="assets/mui/css/mui.css">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/search-result.css">
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/template/template-native.js"></script>
+    <script src="assets/mui/js/mui.js"></script>
+    <script src="js/search-result.js"></script>
+</head>
+<body>
+    <!-- 头部标题开始 -->
+    <header id="header" class="mui-bar mui-bar-nav mall-header">
+        <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">搜索结果</h1>
+    </header><!-- /header -->
+    <!-- 头部标题结束 -->
+    <!-- 底部导航开始 -->
+    <nav class="mui-bar mui-bar-tab footer mall-footer">
+        <a class="mui-tab-item mui-active" href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <span class="mui-tab-label">首页</span>
+        </a><!--
+     --><a class="mui-tab-item" href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <span class="mui-tab-label">分类</span>
+        </a><!--
+     --><a class="mui-tab-item" href="cart.html">
+            <span class="mui-icon iconfont icon-cart"></span>
+            <span class="mui-tab-label">购物车</span>
+        </a><!--
+     --><a class="mui-tab-item" href="user.html">
+            <span class="mui-icon mui-icon-person"></span>
+            <span class="mui-tab-label">会员中心</span>
+        </a>
+    </nav>
+    <!-- 底部导航结束 -->
+    <!-- 主要内容开始 -->
+    <div class="mui-content"  id="refreshContainer">
+        <div class="main-content">
+              <!-- 条件排序开始 -->
+            <div class="mui-row result-filter">
+                <div class="mui-col-xs-6 filter-item">
+                    <span>价格</span>
+                    <i class="mui-icon mui-icon-arrowdown"></i>
+                </div>
+                <div class="mui-col-xs-6 filter-item">
+                    <span>销量</span>
+                    <i class="mui-icon mui-icon-arrowdown"></i>
+                </div>
+            </div>
+            <!-- 条件排序结束 -->
+            <!-- 搜索结果开始 -->
+            <div class="mall-product">
+              <ul class="mui-clearfix search-results" >
+                  <script id="searchTpl" type="text/template">
+                      <% for(var i = 0;i<content.length; i++) {%>
+                          <li>
+                              <a href="#">
+                                 <img src="<%=content[i].proImg%>" alt="">
+                                 <span class="product-desc"><%=content[i].proName%></span>
+                                 <p class="mall-pPrice">
+                                    <span class="now-price"><%=content[i].proNowprice%></span>
+                                    <span class="del-price"><%=content[i].proDelprice%></span>
+                                 </p>
+                                 <span class="buy-now">立刻购买</span>
+                              </a>
+                           </li>
+                      <%}%>
+                  </script>
+              </ul>
+            </div>
+            <!-- 搜索结果结束 -->
+        </div>
+        
+    </div>
+    <!-- 主要内容结束 -->
+</body>
+</html>

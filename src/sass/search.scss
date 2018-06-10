@@ -1,0 +1,64 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-06-10 15:20:53
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-06-10 17:17:31
+*/
+// 搜索历史
+
+.search-container {
+    background: #fff;
+    // padding-top: 10px;
+    .search-box {
+        width: 100%;
+        padding: 10px;
+        position: relative;
+        height: 44px;
+        input {
+            width: 100%;
+            height: 40px;
+            border-color: #006699;
+            padding: {
+                top: 4px;
+                bottom: 4px;
+                left: 8px;
+            }
+        }
+        .search-btn {
+            display: block;
+            width: 60px;
+            height: 40px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #006699;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+    }
+    .search-mainContent {
+        padding: 30px 10px;
+        .search-btns {
+            a {
+                color: #8f8f94;
+            }
+        }
+        .search-history {
+            margin: {
+                top: 10px;
+                bottom: 10px;
+            }
+            ul {
+                border-top: 1px solid #ccc;
+                padding-top: 10px;
+            }
+        }
+    }
+}
+
+
+
+

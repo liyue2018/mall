@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-06-09 11:51:36
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-09 14:16:45
+* @Last Modified time: 2018-06-10 16:25:04
 */
 @font-face {
   font-family: "iconfont";
@@ -20,6 +20,11 @@
 
 .icon-cart:before {
   content: "\e698"; }
+
+ul, li {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
 
 body, .mall-content {
   background: #fff; }
