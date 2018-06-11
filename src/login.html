@@ -4,25 +4,26 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>mobile</title>
+    <title>mobile----login</title>
     <link rel="stylesheet" href="assets/mui/css/mui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="assets/mui/js/mui.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/login.js"></script>
 
 </head>
 <body>
     <!-- 头部标题开始 -->
     <header id="header" class="mui-bar mui-bar-nav mall-header">
         <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back-icon"></a>
-        <h1 class="mui-title">网页标题</h1>
-        <a href="search.html" class="mui-icon mui-icon-search mui-pull-right search-icon"></a>
+        <h1 class="mui-title">登录</h1>
     </header><!-- /header -->
     <!-- 头部标题结束 -->
     <!-- 底部导航开始 -->
     <nav class="mui-bar mui-bar-tab footer mall-footer">
-        <a class="mui-tab-item mui-active" href="index.html">
+        <a class="mui-tab-item" href="index.html">
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a><!--
@@ -41,7 +42,22 @@
     </nav>
     <!-- 底部导航结束 -->
     <!-- 主要内容开始 -->
-    <div class="mui-content"></div>
+    <div class="mui-content login-content">
+        <!-- 表单开始 -->
+            <form class="mui-input-group login-form">
+                <div class="mui-input-row">
+                    <label>用户名</label>
+                <input type="text" class="mui-input-clear" placeholder="用户名随意填" name="username" />
+                </div>
+                <div class="mui-input-row">
+                    <label>密码</label>
+                    <input type="password" class="mui-input-password" placeholder="密码请随意" name="password" />
+                </div>
+                <a href="javascript:;" type="button" class="mui-btn mui-btn-primary login-btn">登录</a>
+            </form>
+        <!-- 表单结束 -->
+            <a href="register.html" class="mui-pull-right login-now-btn">免费注册</a>
+    </div>
     <!-- 主要内容结束 -->
 </body>
 </html>

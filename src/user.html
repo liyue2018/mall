@@ -7,22 +7,24 @@
     <title>mobile</title>
     <link rel="stylesheet" href="assets/mui/css/mui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/form.css">
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="assets/mui/js/mui.js"></script>
     <script src="js/public.js"></script>
+    <script src="js/user.js"></script>
 
 </head>
 <body>
     <!-- 头部标题开始 -->
     <header id="header" class="mui-bar mui-bar-nav mall-header">
         <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back-icon"></a>
-        <h1 class="mui-title">网页标题</h1>
+        <h1 class="mui-title">会员中心</h1>
         <a href="search.html" class="mui-icon mui-icon-search mui-pull-right search-icon"></a>
-    </header><!-- /header -->
+        </header><!-- /header -->
     <!-- 头部标题结束 -->
     <!-- 底部导航开始 -->
     <nav class="mui-bar mui-bar-tab footer mall-footer">
-        <a class="mui-tab-item mui-active" href="index.html">
+        <a class="mui-tab-item" href="index.html">
             <span class="mui-icon mui-icon-home"></span>
             <span class="mui-tab-label">首页</span>
         </a><!--
@@ -34,14 +36,38 @@
             <span class="mui-icon iconfont icon-cart"></span>
             <span class="mui-tab-label">购物车</span>
         </a><!--
-     --><a class="mui-tab-item" href="user.html">
+     --><a class="mui-tab-item mui-active" href="user.html">
             <span class="mui-icon mui-icon-person"></span>
             <span class="mui-tab-label">会员中心</span>
         </a>
     </nav>
     <!-- 底部导航结束 -->
     <!-- 主要内容开始 -->
-    <div class="mui-content"></div>
+    <div class="mui-content user-content">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">
+                    <i class="mui-icon mui-icon-contact mui-pull-left user-icon"></i>
+                    <p class="user-info">
+                        <span>1809999900</span>
+                        <span>账号 user01</span>
+                    </p>
+                </a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">修改密码</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">我的购物车</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a class="mui-navigate-right">收货地址管理</a>
+            </li>
+            <li class="mui-table-view-cell">
+                <a href="javascript:;" class="mui-text-center" type="button">退出登录</a>
+            </li>
+        </ul>
+    </div>
     <!-- 主要内容结束 -->
 </body>
 </html>

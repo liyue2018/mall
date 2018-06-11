@@ -1,0 +1,63 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-06-11 00:55:17
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-06-11 10:50:41
+*/
+
+// 注册页面
+
+
+.register-content,.login-content, .user-content {
+    background: #fff;
+}
+
+.register-form, .login-form {
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    .mui-input-row {
+        height: 50px;
+        line-height: 50px;
+    }
+}
+.code {
+    position: relative;
+    .get-code {
+        position: absolute;
+        right: 6px;
+        top: 10px;
+        color: #006699;
+    }
+}
+.register-btn,.login-btn {
+    display: block;
+    width: 50%;
+    background: #006699;
+    margin: 20px auto;
+}
+
+.login-now-btn {
+    padding-right: 6px;
+    color: #006699;
+}
+
+// 登录页面
+
+.user-icon {
+    font-size: 50px;
+    color: #006699;
+}
+.user-info {
+    line-height: 20px;
+    margin-top: 6px;
+    margin-left: 60px;
+    span {
+        display: block;
+        color: #000;
+        &:last-child {
+            color: #666;
+        }
+    }
+}
+
+

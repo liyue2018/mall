@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-06-09 11:51:36
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-10 16:25:04
+* @Last Modified time: 2018-06-11 00:26:30
 */
 @font-face {
   font-family: "iconfont";
@@ -43,3 +43,6 @@ body, .mall-content {
     color: #fff; }
     .mall-footer a.mui-tab-item.mui-active {
       color: darkorange; }
+
+.back-icon {
+  color: #fff; }
