@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-06-10 22:30:00
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-11 00:46:41
+* @Last Modified time: 2018-06-12 08:36:28
 */
 .mall-mainContent {
   position: absolute;
@@ -28,8 +28,8 @@
   width: 100%;
   background: #fff; }
   .category-leftLinks li {
-    border-right: 1px solid #ccc;
-    border-top: 1px solid #ccc; }
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd; }
     .category-leftLinks li a {
       display: block;
       padding: 15px 0;

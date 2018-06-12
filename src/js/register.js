@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-06-11 01:14:37
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-11 09:49:17
+* @Last Modified time: 2018-06-11 13:44:13
 */
 
 // html结构加载完成后执行
@@ -14,7 +14,7 @@ $(function () {
     // 给出提示
     // 跳转到登录页面
 
-    $('.register-btn').on('click', function() {
+    $('.register-btn').on('tap', function() {
         // 获取信息
         var username = $('[name="username"]').val();
         var mobile = $('[name="mobile"]').val();

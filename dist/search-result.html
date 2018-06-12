@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name=viewport content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>mobile---搜索结果页面</title>
+    <title>搜索结果</title>
     <link rel="stylesheet" href="assets/mui/css/mui.css">
     <link rel="stylesheet" type="text/css" href="css/base.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -18,10 +18,10 @@
 </head>
 <body>
     <!-- 头部标题开始 -->
-    <header id="header" class="mui-bar mui-bar-nav mall-header">
+    <!-- <header id="header" class="mui-bar mui-bar-nav mall-header">
         <a href="javascript:;" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left back-icon"></a>
         <h1 class="mui-title">搜索结果</h1>
-    </header><!-- /header -->
+    </header> --><!-- /header -->
     <!-- 头部标题结束 -->
     <!-- 底部导航开始 -->
     <nav class="mui-bar mui-bar-tab footer mall-footer">
@@ -37,7 +37,7 @@
             <span class="mui-icon iconfont icon-cart"></span>
             <span class="mui-tab-label">购物车</span>
         </a><!--
-     --><a class="mui-tab-item" href="user.html">
+     --><a class="mui-tab-item" href="login.html">
             <span class="mui-icon mui-icon-person"></span>
             <span class="mui-tab-label">会员中心</span>
         </a>
@@ -64,7 +64,7 @@
                   <script id="searchTpl" type="text/template">
                       <% for(var i = 0;i<content.length; i++) {%>
                           <li>
-                              <a href="#">
+                              <a href="detail.html">
                                  <img src="<%=content[i].proImg%>" alt="">
                                  <span class="product-desc"><%=content[i].proName%></span>
                                  <p class="mall-pPrice">

@@ -2,17 +2,15 @@
 * @Author: liyue2018
 * @Date:   2018-06-10 17:28:38
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-11 00:05:29
+* @Last Modified time: 2018-06-12 13:42:42
 */
 
-// 获取用户输入的关键字
-var keyword = getParamsByUrl(location.href,"keyword");
-var html = "";
+
 
 $(function () {
-    // var html = template('searchTpl',searchData);
-    // $('.search-results').html(html);
-    // getData(keyword);
+    // 获取用户输入的关键字
+    var keyword = getParamsByUrl(location.href,"keyword");
+    var html = "";
     // 侧边栏滑动
     mui('.mui-scroll-wrapper').scroll({
             deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
@@ -31,7 +29,6 @@ $(function () {
     //     }
     // });
 
-});
 
 var searchData = {
     content: [
@@ -95,22 +92,6 @@ var searchData = {
     ]
 }
 
-// 从地址栏中获取参数
-// @param {string} url 地址字符串
-// @param {string} name 要获取的参数名
-// @return {string} 参数名称对应的参数值
-
-function getParamsByUrl (url, name) {
-    var params = url.substr(url.indexOf('?')+1);
-    var param = params.split('&');
-    for (var i = 0;i<param.length;i++) {
-        var current = param[i].split('=');
-        if (current[0] == name) {
-            return current[1];
-        }
-    }
-    return null;
-}
 
 // var page = 1;
 // $.ajax({
@@ -172,6 +153,7 @@ function getData() {
 //     return a - b
 // }
 
+});
 
 
 

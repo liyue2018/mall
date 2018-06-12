@@ -1,0 +1,89 @@
+/*
+* @Author: liyue2018
+* @Date:   2018-06-12 13:57:03
+* @Last Modified by:   liyue2018
+* @Last Modified time: 2018-06-12 15:50:06
+*/
+
+.detail-content {
+    background: #fff;
+}
+// 轮播图
+.detail-slider-group {
+    height: 280px;
+    .slider-item {
+        img {
+            height: 100%;
+        }
+    }
+}
+
+// 详情
+.detail-main {
+    background: #fff;
+}
+.detail-name {
+    padding: 10px;
+    font-weight: 500;
+}
+.price {
+    padding: 10px;
+    margin: 10px 0;
+    border: {
+        top: 1px solid #ddd;
+        bottom: 1px solid #ddd;
+    }
+    .now-price {
+        color: #f00;
+        font-size: 20px;
+    }
+    .old-price {
+        padding-left: 10px;
+        color: #ccc;
+        text-decoration: line-through;
+    }
+}
+.size-list {
+    padding-bottom: 16px;
+    .size-item {
+        display: inline-block;
+        padding: 4px;
+        border: 1px solid #ccc;
+        margin: 5px;
+    }
+    span.active {
+        color: #fff;
+        background: #fa672d;
+    }
+}
+.num {
+    padding-top: 16px;
+    border-top: 1px solid #ddd;
+    .counter {
+        display: inline-block;
+        .count-input {
+            width: 30px;
+            text-align: center;
+            padding: 0;
+        }
+        .reduce,.plus {
+            border: 1px solid #ddd;
+            display: inline-block;
+            padding: 10px 10px;
+        }
+        .reduce {
+            margin-left: 6px;
+        }
+    }
+}
+
+.cart {
+    .add-cart {
+        background: #991020;
+        color: #fff;
+    }
+    .check-cart {
+        background: #fa672d;
+        color: #fff;
+    }
+}

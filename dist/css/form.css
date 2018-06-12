@@ -2,15 +2,15 @@
 * @Author: liyue2018
 * @Date:   2018-06-11 00:55:17
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-11 10:50:41
+* @Last Modified time: 2018-06-12 08:51:36
 */
-.register-content, .login-content, .user-content {
+.register-content, .login-content, .user-content, .modify-content, .address-content, .addAdress-content {
   background: #fff; }
 
-.register-form, .login-form {
+.register-form, .login-form, .modify-form, .addAdress-form {
   padding-bottom: 8px;
   margin-bottom: 10px; }
-  .register-form .mui-input-row, .login-form .mui-input-row {
+  .register-form .mui-input-row, .login-form .mui-input-row, .modify-form .mui-input-row, .addAdress-form .mui-input-row {
     height: 50px;
     line-height: 50px; }
 
@@ -22,7 +22,7 @@
     top: 10px;
     color: #006699; }
 
-.register-btn, .login-btn {
+.register-btn, .login-btn, .modify-btn {
   display: block;
   width: 50%;
   background: #006699;
@@ -32,16 +32,43 @@
   padding-right: 6px;
   color: #006699; }
 
-.user-icon {
+.user-content .user-icon {
   font-size: 50px;
   color: #006699; }
 
-.user-info {
+.user-content .user-info {
   line-height: 20px;
   margin-top: 6px;
   margin-left: 60px; }
-  .user-info span {
+  .user-content .user-info span {
     display: block;
     color: #000; }
-    .user-info span:last-child {
+    .user-content .user-info span:last-child {
       color: #666; }
+
+.address-content .add-address {
+  display: block;
+  width: 80%;
+  background: #006699;
+  text-align: center;
+  color: #fff;
+  margin: 20px auto;
+  padding: 10px 0; }
+
+.address-content .address-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd; }
+  .address-content .address-list li .user-info {
+    color: #000;
+    font-weight: 500; }
+  .address-content .address-list li:first-child {
+    border-top: 1px solid #ccc; }
+
+.addAdress-content .sure-btn {
+  width: 80%;
+  color: #fff;
+  background: #006699;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  margin: 14px auto 10px; }

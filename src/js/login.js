@@ -2,7 +2,7 @@
 * @Author: liyue2018
 * @Date:   2018-06-11 09:59:21
 * @Last Modified by:   liyue2018
-* @Last Modified time: 2018-06-11 10:25:27
+* @Last Modified time: 2018-06-12 07:59:21
 */
 
 $(function () {
@@ -12,11 +12,9 @@ $(function () {
     // 调用登录接口实现登录
     // 登录成功跳转到会员中心
 
-    $('.login-btn').on('click', function() {
-        console.log('ha');
+    $('.login-btn').on('tap', function() {
         var username = $('[name="username"]').val();
         var password = $('[name="password"]').val();
-        console.log(password);
 
         if (!username) {
             mui.toast('用户名不能为空');
